@@ -1,50 +1,43 @@
-
+<!DOCTYPE html>
+<html lang="en">
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href="/dist/output.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="styles.css">
-  
   <title>Frontend Mentor | Interactive rating component</title>
 
 </head>
-<body class="flex flex-col-reverse justify-between place-content-center" id="body">
-
-  <!-- Rating state start -->
-
-<section class="w-4/5 max-w-sm ">
-
-  <div class="card flex flex-col p-4 rounded-xl">
-    <div class="card-img "><img class="p-2 rounded-full mb-3" src="./images/icon-star.svg" alt=""></div>
-    <h2 class="card-header text-xl font-bold mb-3"> How did we do? </h2>
-    <span class="card-text text-[15px] mb-3" > Please let us know how we did  with your support request. All feedback is appreciated to help us improve our offering! </span>
-      <form action="#" class="card-form flex flex-col">
-        <ul class="list-none flex justify-between mb-5">
-          <li><button type="button" class="p-4 rounded-full button-rate">1</button></li>
-          <li><button type="button" class="p-4 rounded-full button-rate">2</button></li>
-          <li><button type="button" class="p-4 rounded-full button-rate">3</button></li>
-          <li><button type="button" class="p-4 rounded-full button-rate">4</button></li>
-          <li><button type="button" class="p-4 rounded-full button-rate">5</button></li>
-        </ul>
-        
-        <button type="submit" id="buttonSubmit" class="rounded-full p-2.5  tracking-widest">SUBMIT</button>
-      </form>
-
+<body  >
+  <div class="card card-submit">
+    <img src="./images/icon-star.svg" alt="golden star">
+    <h1 > How did we do? </h2>
+    <p class="" > Please let us know how we did  with your support request. All feedback is appreciated to help us improve our offering! </p>
+    <form action="#" class="card-form flex flex-col">
+      <div class="rating">
+        <button type="button" class="rating-btn" id="null">1</button>
+        <button type="button" class="rating-btn" id="null">2</button>
+        <button type="button" class="rating-btn" id="null">3</button>
+        <button type="button" class="rating-btn" id="null">4</button>
+        <button type="button" class="rating-btn" id="null">5</button>
+      </div>
+      <button type="submit" id="buttonSubmit">SUBMIT</button>
+    </form>
   </div>
-</section>
-
-  <!-- Rating state End -->
+  <div class="card card-thanks hide">
+    <img src="./images/illustration-thank-you.svg" alt="image thank you">
+    <span id="thanks-rating">You selected 0 out of 5</span>
+    <h2>Thank you!</h2>
+    <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
+  </div>
 
   <footer class="attribution flex flex-col justify-end">
     <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/Darowl">Darowl.dev</a>. </span>
     
   </footer>
-
-  <script src="app.js"></script>
+<script src="app.js"></script>
 </body>
 
 </html>
