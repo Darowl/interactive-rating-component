@@ -8,11 +8,14 @@ let ratingNumber;
 
 buttonRating.forEach(btn => {
   btn.addEventListener('click', () => {
-    if(btn.id == "null") {
+    
+    if(btn.classList[1] == undefined) {
+      console.log('e')
       for(let i = 0; i < buttonRating.length; i++) {
-        buttonRating[i].id = "null";
+  
+        buttonRating[i].classList.remove('selected');
       }
-      btn.id = "selected";
+      btn.classList.add("selected");
       ratingNumber = parseFloat(btn.textContent);
     }
   })
@@ -30,7 +33,4 @@ btnSubmit.addEventListener('click', () => {
     text.textContent = `You selected ${ratingNumber} out of 5`
   }
 })
-
-
-
 
