@@ -90,9 +90,9 @@ form {
   color: #fff;
 }
 
-#selected {
-  background-color: var(--orange);
-  color: #fff;
+.selected {
+  background-color: var(--orange) !important; 
+  color: #fff !important;
 }
 
 button[type="submit"] {
