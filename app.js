@@ -1,36 +1,33 @@
-const buttonRating = document.querySelectorAll(".rating-btn")
-const btnSubmit = document.getElementById('buttonSubmit')
-const text = document.getElementById('thanks-rating')
+const buttonRating = Array.from(document.getElementById("rating-buttons").children);
+const buttonSubmit = document.getElementById('rating-submit');
+const text = document.getElementById('submit-thanks');
+let ratingNumber = 0;
 
-
-let ratingNumber;
-
+document.querySelector('#rating-form').addEventListener('submit', e => e.preventDefault())
 
 buttonRating.forEach(btn => {
   btn.addEventListener('click', () => {
-    
-    if(btn.classList[1] == undefined) {
-      console.log('e')
+    if(btn.className == '') {
       for(let i = 0; i < buttonRating.length; i++) {
-  
-        buttonRating[i].classList.remove('selected');
+        buttonRating[i].className = '';
+        
       }
-      btn.classList.add("selected");
+      btn.className = 'selected';
       ratingNumber = parseFloat(btn.textContent);
     }
   })
 });
 
+const submitNumber = (number) => {return 'vd'}
 
-btnSubmit.addEventListener('click', () => {
+buttonSubmit.addEventListener('click', () => {
   if (ratingNumber > 0 && ratingNumber <= 5) {
-    document.querySelector('.card-submit').classList.toggle('hide')
-
-    console.log(document.querySelector('.card-submit').className);
-
-    document.querySelector('.card-thanks').classList.toggle('hide')
-
+    document.querySelector('.container-rating').classList.toggle('hide')
+    document.querySelector('.container-submit').classList.toggle('hide')
     text.textContent = `You selected ${ratingNumber} out of 5`
   }
 })
+
+
+
 
